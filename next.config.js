@@ -25,21 +25,20 @@ const nextConfig = {
             },
         ],
     },
-    // async redirects() {
+    // async rewrites() {
     //     return [
     //         {
-    //             source: '/:path*)',
+    //             source: '/api/:path*',
     //             has: [
     //                 {
     //                     type: 'host',
-    //                     value: 'spb.localhost:3000',
+    //                     value: '(?<subdomain>.*)\\..*',
     //                 },
     //             ],
-    //             permanent: true,
-    //             destination: 'google.ru',
-    //         },
+    //             destination: `http://:subdomain.example_host:8080/:path*`
+    //         }
     //     ]
-    // },
+    // }
 };
 
 module.exports = nextConfig;
